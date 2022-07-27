@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@font-face {
+    font-family: "Passion One";
+    src: local(Passion One), url(font/PassionOne-Bold.ttf) format('truetype');
+}
 
 * {
     margin: 0px;
@@ -9,34 +13,41 @@
 }
 header {
     background-color: black;
-    height: 230px;
+    height: calc(300px + 6vw);
     color: white;
+    position: relative;
 }
-header > h1 {
+header > div.cent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+header > div.cent > h1 {
     font-family: 'Passion One', cursive;
-    font-size: 5.5em;
+    font-size: calc(1em + 9vw);
     text-align: center;
-    padding-top: 60px;
+    white-space: nowrap;
 }
-header > p {
+header > div.cent > p {
     text-align: center;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
 }
-header > p > a {
+header > div.cent > p > a {
     text-decoration: none;
     font-weight: bolder;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
-header > p > a:hover {
+header > div.cent > p > a:hover {
     text-decoration: underline;
 }
 article section {
-    font-size: 2em;
     text-align: left;
-    line-height: 70px;
-    margin: 100px 0px;
+    line-height: calc(1em + 6vw);
+    margin: calc(25px + 10vw) 0px;
+    font-size: calc(1em + 3vw);
 }
 article > section > p {
     margin: 0px 30px;
@@ -45,26 +56,28 @@ article > section > div#img1 {
     background: darkgreen url("imagens/background001.jpg") center center no-repeat fixed;
     background-size: cover;
 
-    padding: 10% 30px;
+    padding: calc(25px + 10vw) 30px;
     box-shadow: inset 0px 10px 25px rgba(66, 66, 66, 0.795);
 }
 article > section > div#img1 > p {
     color: white;
     background-color: rgba(0, 0, 0, 0.377);
-    max-width: 394px;
+    max-width: 45vw;
+    min-width: 250px;
     padding: 15px 10px;
 }
 article > section > div#img2 {
     background: gray url("imagens/background002.jpg") center center no-repeat fixed;
     background-size: cover;
 
-    padding: 10% 30px;
+    padding: calc(25px + 10vw) 30px;
     box-shadow: inset 0px 10px 25px rgba(66, 66, 66, 0.795);
 }
 article > section > div#img2 > p {
     color: white;
     background-color: rgba(0, 0, 0, 0.596);
-    max-width: 394px;
+    max-width: 46vw;
+    min-width: 250px;
     padding: 15px 10px;
 }
 footer {
