@@ -11,81 +11,73 @@
     padding: 0px;
     font-family: 'Sriracha', cursive;
 }
+html, body {
+    min-height: 100vh;
+    background-color: white;
+}
 header {
     background-color: black;
-    height: calc(300px + 6vw);
     color: white;
-    position: relative;
 }
-header > div.cent {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-header > div.cent > h1 {
+header > h1 {
     font-family: 'Passion One', cursive;
     font-size: calc(1em + 9vw);
     text-align: center;
-    white-space: nowrap;
+    font-variant: small-caps;
+    padding-top: 50px;
 }
-header > div.cent > p {
+header > p {
     text-align: center;
     font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 50px;
 }
-header > div.cent > p > a {
+header > p > a {
     text-decoration: none;
     font-weight: bolder;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-header > div.cent > p > a:hover {
+header > p > a:hover {
     text-decoration: underline;
 }
-article section {
+main section {
     text-align: left;
-    line-height: calc(1em + 6vw);
-    margin: calc(25px + 10vw) 0px;
-    font-size: calc(1em + 3vw);
+    line-height: 2em;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    font-size: clamp(1em, 1em + 2vw, 4em);
 }
-article > section > p {
-    margin: 0px 30px;
+main > section > p {
+    padding-bottom: 2em;
 }
-article > section > div#img1 {
-    background: darkgreen url("imagens/background001.jpg") center center no-repeat fixed;
-    background-size: cover;
-
-    padding: calc(25px + 10vw) 30px;
-    box-shadow: inset 0px 10px 25px rgba(66, 66, 66, 0.795);
-}
-article > section > div#img1 > p {
+main > section.img {
+    box-shadow: inset 6px 6px 13px rgba(66, 66, 66, 0.795);
     color: white;
+    background-color: gray;
+    background-attachment: fixed;
+    background-size: cover;
+}
+main > section.img > p {
     background-color: rgba(0, 0, 0, 0.377);
-    max-width: 45vw;
-    min-width: 250px;
-    padding: 15px 10px;
+    display: inline-block;
+    padding: 5px;
 }
-article > section > div#img2 {
-    background: gray url("imagens/background002.jpg") center center no-repeat fixed;
-    background-size: cover;
+main > section#img1 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+}
 
-    padding: calc(25px + 10vw) 30px;
-    box-shadow: inset 0px 10px 25px rgba(66, 66, 66, 0.795);
-}
-article > section > div#img2 > p {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.596);
-    max-width: 46vw;
-    min-width: 250px;
-    padding: 15px 10px;
+main > section#img2 {
+    background-image: url(imagens/background002.jpg);
 }
 footer {
     background-color: black;
     color: white;
-    padding: 6px 0px;
+    padding: 6px;
     text-align: center;
 }
 footer p,strong {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
